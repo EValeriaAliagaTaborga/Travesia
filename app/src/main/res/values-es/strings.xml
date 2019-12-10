@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Travesia</string>
+    <string name="btnlogin">Iniciar sesión</string>
+    <string name="btnsignup">Registrarse</string>
+    <string name="txtemail">E-mail</string>
+    <string name="txtpassword">Contraseña</string>
+    <string name="lblprofilename">Travis El Pájaro Migratorio</string>
+    <string name="lblprofilenationality"></string>
+</resources>
