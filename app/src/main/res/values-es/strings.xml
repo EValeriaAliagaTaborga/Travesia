@@ -28,4 +28,17 @@
     <string name="lblOnTourTitle">En Tour</string>
     <string name="lblMoreTitle">Más</string>
 
+    <!-- Login Activity -->
+
+    <string name="lblLoginTitle">INICIAR SESIÓN</string>
+    <string name ="lblEmail">Email</string>
+    <string name="lblPassword">Contraseña</string>
+
+    <string name="lblForget">¿Olvidaste tu contraseña?</string>
+    <string name="buttonLogin">Iniciar sesión</string>
+
+    <string name="lblOr">O</string>
+    <string name="buttonSignUp">REGISTRARSE</string>
+
+
 </resources>
