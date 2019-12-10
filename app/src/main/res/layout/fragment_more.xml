@@ -13,12 +13,12 @@
     <TextView
         style="@style/MoreFont.Title"
         android:id="@+id/lbltitlemore"
-        android:text="@string/lbltitlemore" />
+        android:text="@string/lblTitleMore" />
 
     <TextView
         style="@style/MoreFont"
         android:id="@+id/lblgreetings1"
-        android:text="@string/lblgreetings1"/>
+        android:text="@string/lblGreetings1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:id="@+id/lblgreetings2"
             style="@style/MoreFont"
             android:layout_width="187dp"
-            android:text="@string/lblgreetings2" />
+            android:text="@string/lblGreetings2" />
 
         <ImageView
             android:id="@+id/imgTravismore"
@@ -44,7 +44,7 @@
     <TextView
         android:id="@+id/lblTravismore"
         style="@style/MoreFontTravis"
-        android:text="@string/lblTravismore" />
+        android:text="@string/lblTravisMore" />
 
 
 
