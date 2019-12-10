@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/input_group">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="LOGIN"
+            android:textColor="#FFFFFF"
+            android:textSize="35sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_text"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:padding="15dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_text"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp" />
+
+        <TextView
+            android:id="@+id/signUp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Forgot password?"
+            android:textAllCaps="true"
+            android:textColor="#FAD0E1"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="LOG IN"
+            android:textAllCaps="false"
+            android:textColor="#FE5295"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="140dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="100dp"
+            android:background="@android:color/darker_gray" />
+        <View
+            android:layout_width="140dp"
+            android:layout_height="2dp"
+           android:layout_marginTop="-3dp"
+            android:layout_marginRight="100dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginTop="-17dp"
+            android:fontFamily="sans-serif"
+            android:text="OR"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="SIGN UP"
+            android:textAllCaps="false"
+            android:textColor="#FE5295"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/input_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+
+    </LinearLayout>
+
+    </RelativeLayout>
