@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_profile"
+        android:title="@string/lblProfileTitle"
+        android:icon="@drawable/ic_person_outline_blue_30dp" />
+    <item android:id="@+id/action_bookings"
+        android:title="@string/lblBookingsTitle"
+        android:icon="@drawable/ic_credit_card_blue_30dp" />
+    <item
+        android:id="@+id/action_explore"
+        android:title="@string/lblExploreTitle"
+        android:icon="@drawable/ic_search_blue_30dp" />
+    <item
+        android:id="@+id/action_on_tour"
+        android:title="@string/lblOnTourTitle"
+        android:icon="@drawable/ic_on_tour_blue_30dp" />
+    <item
+        android:id="@+id/action_more"
+        android:title="@string/lblMoreTitle"
+        android:icon="@drawable/ic_more_blue_30dp" />
+</menu>
+
+

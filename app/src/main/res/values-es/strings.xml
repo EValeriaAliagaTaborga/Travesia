@@ -12,4 +12,12 @@
     <!-- Profile Activity -->
     <string name="lblprofilename">Travis El Pájaro Migratorio</string>
     <string name="lblprofilenationality">Nacionalidad</string>
+
+    <!-- Menu Titles -->
+    <string name="lblProfileTitle">Perfil</string>
+    <string name="lblBookingsTitle">Reservas</string>
+    <string name="lblExploreTitle">Explora</string>
+    <string name="lblOnTourTitle">En Tour</string>
+    <string name="lblMoreTitle">Más</string>
+
 </resources>

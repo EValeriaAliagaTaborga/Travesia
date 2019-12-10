@@ -14,10 +14,17 @@
     <string name="lblprofilenationality">Nationality</string>
 
     <!-- More Fragment -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lblgreetings1">Hello there! \n\nThanks for sharing your plans with me and my friends. We are always looking for new ways to make your experience better. So please, feel free to take a look to this Guide with some tips to make your trips more fun, safe and epic!</string>
     <string name="lblgreetings2">\nAnd if liked this App, don"'"t forget to give it 5 stars on Google App Store. \n\nSee ya my friend. \n\nLove,</string>
     <string name="lbltitlemore">Travis"'" Travesia Guide</string>
     <string name="lblTravismore">Travis</string>
     <string name="cdesTravisPictureMore">Travis The Migratory Bird picture - Hint: He is an eastern blue bird</string>
+
+    <!-- Menu Titles -->
+    <string name="lblProfileTitle">Profile</string>
+    <string name="lblBookingsTitle">Bookings</string>
+    <string name="lblExploreTitle">Explore</string>
+    <string name="lblOnTourTitle">On Tour</string>
+    <string name="lblMoreTitle">More</string>
+
 </resources>
