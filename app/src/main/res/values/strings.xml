@@ -5,7 +5,7 @@
 
     <!-- Login Activity -->
     <string name="btnLogin">Log in</string>
-    <string name="btnSignUp">Sign Up</string>
+    <string name="btnSignup">Sign Up</string>
     <string name="txtEmail">E-mail</string>
     <string name="txtPassword">Password</string>
 
@@ -14,6 +14,7 @@
     <string name="lblProfileNationality">Nationality</string>
 
     <!-- More Fragment -->
+
     <string name="lblGreetings1">Hello there! \n\nThanks for sharing your plans with me and my friends. We are always looking for new ways to make your experience better. So please, feel free to take a look to this Guide with some tips to make your trips more fun, safe and epic!</string>
     <string name="lblGreetings2">\nAnd if liked this App, don"'"t forget to give it 5 stars on Google App Store. \n\nSee ya my friend. \n\nLove,</string>
     <string name="lblTitleMore">Travis"'" Travesia Guide</string>
@@ -26,5 +27,4 @@
     <string name="lblExploreTitle">Explore</string>
     <string name="lblOnTourTitle">On Tour</string>
     <string name="lblMoreTitle">More</string>
-
 </resources>

@@ -17,8 +17,9 @@
 
     <TextView
         style="@style/MoreFont"
-        android:id="@+id/lblGreetings1"
+        android:id="@+id/lblgreetings1"
         android:text="@string/lblGreetings1"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
