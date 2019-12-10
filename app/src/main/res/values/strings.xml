@@ -27,4 +27,17 @@
     <string name="lblExploreTitle">Explore</string>
     <string name="lblOnTourTitle">On Tour</string>
     <string name="lblMoreTitle">More</string>
+
+    <!-- Login Activity -->
+
+    <string name="lblLoginTitle">LOGIN</string>
+    <string name="lblEmail">Email</string>
+    <string name="lblPassword">Password</string>
+    <string name="lblForget">Forget your password?</string>
+    <string name="buttonLogin">LOG IN</string>
+
+    <string name="lblOr">OR</string>
+
+    <string name="buttonSignUp">SIGN UP</string>
+
 </resources>
