@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Travesia</string>
+    <string name="btnlogin">Log in</string>
+    <string name="btnsignup">Sign Up</string>
+    <string name="txtemail">E-mail</string>
+    <string name="txtpassword">Password</string>
+    <string name="lblprofilename">Travis The Migratory Bird</string>
+    <string name="lblprofilenationality"></string>
 </resources>
