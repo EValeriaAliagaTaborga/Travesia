@@ -5,7 +5,7 @@
 
     <!-- Login Activity -->
     <string name="btnLogin">Iniciar sesión</string>
-    <string name="btnSignup">Registrarse</string>
+    <string name="btnSignUp">Registrarse</string>
     <string name="txtEmail">E-mail</string>
     <string name="txtPassword">Contraseña</string>
 
