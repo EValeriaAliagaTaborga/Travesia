@@ -10,6 +10,15 @@
     <string name="txtpassword">Contraseña</string>
 
     <!-- Profile Activity -->
-    <string name="lblprofilename">Travis El Pájaro Migratorio</string>
+    <string name="lblprofilename">Travis El Ave Migratoria</string>
     <string name="lblprofilenationality">Nacionalidad</string>
+
+    <!-- More Fragment -->
+    <string name="hello_blank_fragment">Hola fragmento vacío</string>
+    <string name="lblgreetings1">Hola! \n\n Gracias por compartir tus planes conmigo y mis amigos. Buscamos recurrentemente nuevas maneras para mejorar tu experiencia. Así que por favor siéntete libre de echar un vistazo a esta Guía
+        con algunos consejos para que tus viajes sean más divertidos, seguros y épicos!</string>
+    <string name="lblgreetings2">\nY si te gustó esta App, no te olvides de darle 5 estrellas en Google App Store. \n\nNos vemos pronto amigo. \n\nCon amor,</string>
+    <string name="lbltitlemore">La Guía de Travis</string>
+    <string name="lblTravismore">Travis</string>
+    <string name="cdesTravisPictureMore">Travis El Ave Migratoria - Pista: Es un ave azul oriental</string>
 </resources>
