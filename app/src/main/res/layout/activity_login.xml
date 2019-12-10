@@ -41,7 +41,7 @@
             android:padding="15dp" />
 
         <TextView
-            android:id="@+id/signUp_text"
+            android:id="@+id/login_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
