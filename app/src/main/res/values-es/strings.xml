@@ -20,4 +20,12 @@
     <string name="lblTitleMore">La Guía de Travis</string>
     <string name="lblTravisMore">Travis</string>
     <string name="cdesTravisPictureMore">Travis El Ave Migratoria - Pista: Es un ave azul oriental</string>
+
+    <!-- Menu Titles -->
+    <string name="lblProfileTitle">Perfil</string>
+    <string name="lblBookingsTitle">Reservas</string>
+    <string name="lblExploreTitle">Explora</string>
+    <string name="lblOnTourTitle">En Tour</string>
+    <string name="lblMoreTitle">Más</string>
+
 </resources>

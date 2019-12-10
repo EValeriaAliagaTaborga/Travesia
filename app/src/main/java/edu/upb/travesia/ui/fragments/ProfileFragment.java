@@ -1,19 +1,15 @@
 package edu.upb.travesia.ui.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import edu.upb.travesia.R;
 
-public class MoreFragment extends BaseFragment {
+public class ProfileFragment extends BaseFragment {
 
-    public MoreFragment() {
+    public ProfileFragment() {
         super();
     }
 
@@ -21,7 +17,7 @@ public class MoreFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_more, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
         //initUI(view);
         return view;
     }
