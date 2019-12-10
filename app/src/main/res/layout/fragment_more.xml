@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.MoreFragment"
+    android:padding="20pt">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        style="@style/MoreFont.Title"
+        android:id="@+id/lbltitlemore"
+        android:text="@string/lbltitlemore" />
+
+    <TextView
+        style="@style/MoreFont"
+        android:id="@+id/lblgreetings1"
+        android:text="@string/lblgreetings1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/lblgreetings2"
+            style="@style/MoreFont"
+            android:layout_width="187dp"
+            android:text="@string/lblgreetings2" />
+
+        <ImageView
+            android:id="@+id/imgTravismore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/cdesTravisPictureMore"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/travis_inspiration" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblTravismore"
+        style="@style/MoreFontTravis"
+        android:text="@string/lblTravismore" />
+
+
+
+
+</LinearLayout>
