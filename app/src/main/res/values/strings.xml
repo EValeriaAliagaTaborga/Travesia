@@ -4,20 +4,20 @@
     <string name="app_name">Travesia</string>
 
     <!-- Login Activity -->
-    <string name="btnlogin">Log in</string>
-    <string name="btnsignup">Sign Up</string>
-    <string name="txtemail">E-mail</string>
-    <string name="txtpassword">Password</string>
+    <string name="btnLogin">Log in</string>
+    <string name="btnSignUp">Sign Up</string>
+    <string name="txtEmail">E-mail</string>
+    <string name="txtPassword">Password</string>
 
     <!-- Profile Activity -->
-    <string name="lblprofilename">Travis The Migratory Bird</string>
-    <string name="lblprofilenationality">Nationality</string>
+    <string name="lblProfileName">Travis The Migratory Bird</string>
+    <string name="lblProfileNationality">Nationality</string>
 
     <!-- More Fragment -->
-    <string name="lblgreetings1">Hello there! \n\nThanks for sharing your plans with me and my friends. We are always looking for new ways to make your experience better. So please, feel free to take a look to this Guide with some tips to make your trips more fun, safe and epic!</string>
-    <string name="lblgreetings2">\nAnd if liked this App, don"'"t forget to give it 5 stars on Google App Store. \n\nSee ya my friend. \n\nLove,</string>
-    <string name="lbltitlemore">Travis"'" Travesia Guide</string>
-    <string name="lblTravismore">Travis</string>
+    <string name="lblGreetings1">Hello there! \n\nThanks for sharing your plans with me and my friends. We are always looking for new ways to make your experience better. So please, feel free to take a look to this Guide with some tips to make your trips more fun, safe and epic!</string>
+    <string name="lblGreetings2">\nAnd if liked this App, don"'"t forget to give it 5 stars on Google App Store. \n\nSee ya my friend. \n\nLove,</string>
+    <string name="lblTitleMore">Travis"'" Travesia Guide</string>
+    <string name="lblTravisMore">Travis</string>
     <string name="cdesTravisPictureMore">Travis The Migratory Bird picture - Hint: He is an eastern blue bird</string>
 
     <!-- Menu Titles -->

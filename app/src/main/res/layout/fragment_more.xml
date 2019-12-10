@@ -12,13 +12,13 @@
 
     <TextView
         style="@style/MoreFont.Title"
-        android:id="@+id/lbltitlemore"
-        android:text="@string/lbltitlemore" />
+        android:id="@+id/lblTitleMore"
+        android:text="@string/lblTitleMore" />
 
     <TextView
         style="@style/MoreFont"
-        android:id="@+id/lblgreetings1"
-        android:text="@string/lblgreetings1"/>
+        android:id="@+id/lblGreetings1"
+        android:text="@string/lblGreetings1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,13 +26,13 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/lblgreetings2"
+            android:id="@+id/lblGreetings2"
             style="@style/MoreFont"
             android:layout_width="187dp"
-            android:text="@string/lblgreetings2" />
+            android:text="@string/lblGreetings2" />
 
         <ImageView
-            android:id="@+id/imgTravismore"
+            android:id="@+id/imgTravisMore"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/cdesTravisPictureMore"
@@ -42,9 +42,9 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/lblTravismore"
+        android:id="@+id/lblTravisMore"
         style="@style/MoreFontTravis"
-        android:text="@string/lblTravismore" />
+        android:text="@string/lblTravisMore" />
 
 
 
