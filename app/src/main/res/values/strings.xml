@@ -1,9 +1,15 @@
 <resources>
+    <!-- Splash Activity -->
     <string name="app_name">Travesia</string>
+
+    <!-- Login Activity -->
     <string name="btnlogin">Log in</string>
     <string name="btnsignup">Sign Up</string>
     <string name="txtemail">E-mail</string>
     <string name="txtpassword">Password</string>
+
+    <!-- Profile Activity -->
     <string name="lblprofilename">Travis The Migratory Bird</string>
-    <string name="lblprofilenationality"></string>
+    <string name="lblprofilenationality">Nationality</string>
+
 </resources>
