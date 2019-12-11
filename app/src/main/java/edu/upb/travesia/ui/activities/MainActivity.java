@@ -15,6 +15,7 @@ import java.util.Map;
 
 import edu.upb.travesia.R;
 import edu.upb.travesia.ui.fragments.BookingsFragment;
+import edu.upb.travesia.ui.fragments.CountriesListFragment;
 import edu.upb.travesia.ui.fragments.ExploreFragment;
 import edu.upb.travesia.ui.fragments.MoreFragment;
 import edu.upb.travesia.ui.fragments.OnTourFragment;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                         loadFragment(Constants.KEY_FRAGMENT_BOOKINGS);
                         break;
                     case R.id.action_explore:
-                        loadFragment(Constants.KEY_FRAGMENT_EXPLORE);
+                        loadFragment(Constants.KEY_FRAGMENT_COUNTRIES);
                         break;
                     case R.id.action_on_tour:
                         loadFragment(Constants.KEY_FRAGMENT_ONTOUR);
@@ -80,9 +81,11 @@ public class MainActivity extends AppCompatActivity {
     private void initFragments() {
         mapFragments.put(Constants.KEY_FRAGMENT_PROFILE, new ProfileFragment());
         mapFragments.put(Constants.KEY_FRAGMENT_BOOKINGS, new BookingsFragment());
-        mapFragments.put(Constants.KEY_FRAGMENT_EXPLORE, new ExploreFragment());
+        //mapFragments.put(Constants.KEY_FRAGMENT_EXPLORE, new ExploreFragment());
         mapFragments.put(Constants.KEY_FRAGMENT_ONTOUR, new OnTourFragment());
         mapFragments.put(Constants.KEY_FRAGMENT_MORE, new MoreFragment());
+        mapFragments.put(Constants.KEY_FRAGMENT_COUNTRIES, new CountriesListFragment());
+
     }
 
     private void loadFragment(String key) {

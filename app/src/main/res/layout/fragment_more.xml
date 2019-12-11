@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.MoreFragment"
-    android:padding="20pt">
+    android:padding="20pt"
+    android:background="@color/colorIcons">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <TextView
         style="@style/MoreFont.Title"
