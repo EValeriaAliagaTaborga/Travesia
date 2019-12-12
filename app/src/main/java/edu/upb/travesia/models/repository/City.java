@@ -2,25 +2,30 @@ package edu.upb.travesia.models.repository;
 
 import com.google.gson.annotations.Expose;
 
+import java.util.List;
+
 public class City {
     @Expose
-    private int id;
+    private String uuid;
 
     @Expose
     private String name;
 
+    @Expose
+    private List<Tour> tours;
 
-    public City(int id, String name) {
-        this.id = id;
+    public City(String uuid, String name, List<Tour> tours) {
+        this.uuid = uuid;
         this.name = name;
+        this.tours = tours;
     }
 
-    public int getId() {
-        return id;
+    public String getUuid() {
+        return uuid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     public String getName() {
@@ -29,6 +34,14 @@ public class City {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Tour> getTours() {
+        return tours;
+    }
+
+    public void setTours(List<Tour> tours) {
+        this.tours = tours;
     }
 
     public City getCity(){

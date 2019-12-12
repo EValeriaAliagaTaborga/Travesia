@@ -9,10 +9,10 @@ import edu.upb.travesia.models.repository.Tour;
 public class ToursUtils {
     public List<Tour> getTours() {
         List<Tour> tours = new ArrayList<>();
-        tours.add(new Tour(1,"Teleferico", R.drawable.cable_car,50));
-        tours.add(new Tour(2,"ElectroPreste", R.drawable.electropreste,300));
-        tours.add(new Tour(3,"Tour 3", R.drawable.default_image,20.5)); //no da la default
-
+/*        tours.add(new Tour("1","Teleferico", 50,R.drawable.cable_car));
+        tours.add(new Tour("2","ElectroPreste", 300,R.drawable.electropreste));
+        tours.add(new Tour("3","Tour 3",20.5, R.drawable.default_image));
+*/
         return tours;
     }
 }

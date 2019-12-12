@@ -1,6 +1,7 @@
 package edu.upb.travesia.adapters;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,9 @@ public class ToursRecyclerViewAdapter extends RecyclerView.Adapter<TourViewHolde
     @Override
     public void onBindViewHolder(@NonNull TourViewHolder tourViewHolder, int position) {
         final Tour tour = this.toursList.get(position);
-        tourViewHolder.imageView.setImageResource(tour.getImage());
+        //tourViewHolder.imageView.setImageResource(tour.getPicture());
+        tourViewHolder.imageView.setImageURI(Uri.parse("android.resource://edu.upb.travesia/drawable/"+tour.getPicture()));
+
         tourViewHolder.textViewName.setText(tour.getName());
         tourViewHolder.textViewPrice.setText(tour.getPrice()+"");
         tourViewHolder.itemView.setOnClickListener(new View.OnClickListener() {

@@ -4,30 +4,31 @@ import com.google.gson.annotations.Expose;
 
 public class Tour {
     @Expose
-    private int id;
+    private String uuid;
 
     @Expose
     private String name;
 
     @Expose
-    private int image;
-
-    @Expose
     private double price;
 
-    public Tour(int id, String name, int image, double price) {
-        this.id = id;
+    @Expose
+    private String picture;
+
+
+    public Tour(String uuid, String name, double price, String picture) {
+        this.uuid = uuid;
         this.name = name;
-        this.image = image;
         this.price = price;
+        this.picture = picture;
     }
 
-    public int getId() {
-        return id;
+    public String getUuid() {
+        return uuid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     public String getName() {
@@ -38,20 +39,20 @@ public class Tour {
         this.name = name;
     }
 
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
-    }
-
     public double getPrice() {
         return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 
     public Tour geTour(){

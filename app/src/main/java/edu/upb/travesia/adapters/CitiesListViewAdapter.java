@@ -36,7 +36,8 @@ public class CitiesListViewAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return this.citiesList.get(position).getId();
+        //return this.citiesList.get(position).getId();
+        return 0;
     }
 
     @Override

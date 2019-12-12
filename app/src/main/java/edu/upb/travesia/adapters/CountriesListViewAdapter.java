@@ -1,6 +1,8 @@
 package edu.upb.travesia.adapters;
 
 import android.content.Context;
+import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,8 @@ public class CountriesListViewAdapter extends BaseAdapter {
     public CountriesListViewAdapter(Context context, List<Country> countriesList) {
         this.context = context;
         this.countriesList = countriesList;
+        Log.e("Adapter - list receive",countriesList.toString());
+        Log.e("Adapter - list",this.countriesList.toString());
     }
 
 
@@ -36,7 +40,8 @@ public class CountriesListViewAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return this.countriesList.get(position).getId();
+        //return this.countriesList.get(position).getId();
+        return 0;
     }
 
     @Override
@@ -57,7 +62,8 @@ public class CountriesListViewAdapter extends BaseAdapter {
         }
 
         Country country = this.countriesList.get(position);
-        viewHolder.imageView.setImageResource(country.getImage());
+        int id = context.getResources().getIdentifier("drawable/" + country.getFlag(), "drawable", context.getPackageName());
+        viewHolder.imageView.setImageResource(id);
         viewHolder.textViewName.setText(country.getName());
         return vista;
     }
