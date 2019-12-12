@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash Activity -->
+    <string name="app_name">Travesia</string>
+
+    <!-- Login Activity -->
+    <string name="btnLogin">Iniciar sesión</string>
+    <string name="btnSignUp">Registrarse</string>
+    <string name="txtEmail">E-mail</string>
+    <string name="txtPassword">Contraseña</string>
+
+    <!-- Profile Activity -->
+    <string name="lblProfileName">Travis El Ave Migratoria</string>
+    <string name="lblProfileNationality">Nacionalidad</string>
+
+    <!-- More Fragment -->
+    <string name="lblGreetings1">Hola! \n\n Gracias por compartir tus planes conmigo y mis amigos. Buscamos recurrentemente nuevas maneras para mejorar tu experiencia. Así que por favor siéntete libre de echar un vistazo a esta Guía
+        con algunos consejos para que tus viajes sean más divertidos, seguros y épicos!</string>
+    <string name="lblGreetings2">\nY si te gustó esta App, no te olvides de darle 5 estrellas en Google App Store. \n\nNos vemos pronto amigo. \n\nCon amor,</string>
+    <string name="lblTitleMore">La Guía de Travis</string>
+    <string name="lblTravisMore">Travis</string>
+    <string name="cdesTravisPictureMore">Travis El Ave Migratoria - Pista: Es un ave azul oriental</string>
+
+    <!-- Menu Titles -->
+    <string name="lblProfileTitle">Perfil</string>
+    <string name="lblBookingsTitle">Reservas</string>
+    <string name="lblExploreTitle">Explora</string>
+    <string name="lblOnTourTitle">En Tour</string>
+    <string name="lblMoreTitle">Más</string>
+
+    <!-- Login Activity -->
+
+    <string name="lblLoginTitle">INICIAR SESIÓN</string>
+    <string name ="lblEmail">Email</string>
+    <string name="lblPassword">Contraseña</string>
+
+    <string name="lblForget">¿Olvidaste tu contraseña?</string>
+    <string name="buttonLogin">Iniciar sesión</string>
+
+    <string name="lblOr">O</string>
+    <string name="buttonSignUp">REGISTRARSE</string>
+
+
+</resources>
