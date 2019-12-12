@@ -23,9 +23,10 @@ public class ToursRecyclerFragment extends BaseFragment{
 
     private RecyclerView recyclerView;
     private Gson gson = new Gson();
+    private List<Tour> toursList;
 
-    public ToursRecyclerFragment() {
-        super();
+    public ToursRecyclerFragment(List<Tour> toursList) {
+        this.toursList = toursList;
     }
 
     @Override
@@ -36,8 +37,8 @@ public class ToursRecyclerFragment extends BaseFragment{
 
         //UserLogged userLogged = this.gson.fromJson(getIntent().getStringExtra(Constants.INTENT_KEY_USER_LOGGED), UserLogged.class);
 
-        ToursUtils toursUtils = new ToursUtils();
-        final List<Tour> toursList = toursUtils.getTours();
+        //ToursUtils toursUtils = new ToursUtils();
+        //final List<Tour> toursList = toursUtils.getTours();
         ToursRecyclerViewAdapter adapter = new ToursRecyclerViewAdapter(getActivity(), toursList);
         adapter.setTourCallback(new TourCallback() {
             @Override

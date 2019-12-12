@@ -15,15 +15,17 @@ import java.util.List;
 import edu.upb.travesia.R;
 import edu.upb.travesia.adapters.CitiesListViewAdapter;
 import edu.upb.travesia.models.repository.City;
+import edu.upb.travesia.models.repository.Tour;
 import edu.upb.travesia.utils.CitiesUtils;
 
 public class CitiesListFragment extends BaseFragment {
 
     private ListView listview;
     private Gson gson = new Gson();
+    private List<City> citiesList;
 
-    public CitiesListFragment() {
-        super();
+    public CitiesListFragment(List<City> citiesList) {
+        this.citiesList = citiesList;
     }
 
     @Override
@@ -35,13 +37,14 @@ public class CitiesListFragment extends BaseFragment {
 
         //UserLogged userLogged = this.gson.fromJson(getIntent().getStringExtra(Constants.INTENT_KEY_USER_LOGGED), UserLogged.class);
 
-        CitiesUtils cityUtils = new CitiesUtils();
-        final List<City> citiesList = cityUtils.getCities();
+        //CitiesUtils cityUtils = new CitiesUtils();
+        //final List<City> citiesList = cityUtils.getCities();
         CitiesListViewAdapter adapter = new CitiesListViewAdapter(getActivity(), citiesList);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                changeFragment(new ToursRecyclerFragment());
+                List<Tour> toursList = citiesList.get(position).getTours();
+                changeFragment(new ToursRecyclerFragment(toursList));
             }
         });
         listview.setAdapter(adapter);

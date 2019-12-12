@@ -21,6 +21,7 @@ import java.util.List;
 import edu.upb.travesia.R;
 import edu.upb.travesia.adapters.CountriesListViewAdapter;
 import edu.upb.travesia.models.repository.Base;
+import edu.upb.travesia.models.repository.City;
 import edu.upb.travesia.models.repository.Country;
 import edu.upb.travesia.utils.Constants;
 import edu.upb.travesia.utils.CountriesUtils;
@@ -68,15 +69,17 @@ public class CountriesListFragment extends BaseFragment {
                     List<Country> countries = (List<Country>) base.getData();
                     //Log.e("Cantidad de paises", "" + countries.size());
 
-                    /*for (Country country : countries) {
-                        Log.e("Pais:", "" + country.getName());
-                    }*/
+                    for (Country country : countries) {
+                        Log.e("Pais:", "" + country.getCities().get(0).getName());
+                    }
                     countriesList = countries;
                     CountriesListViewAdapter adapter = new CountriesListViewAdapter(getActivity(), countriesList);
                     listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            changeFragment(new CitiesListFragment());
+                            //changeFragment(new CitiesListFragment());
+                            List<City> cityList = countriesList.get(position).getCities();
+                            changeFragment(new CitiesListFragment(cityList));
                         }
                     });
                     listview.setAdapter(adapter);
