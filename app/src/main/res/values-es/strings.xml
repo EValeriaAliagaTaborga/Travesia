@@ -11,7 +11,13 @@
 
     <!-- Profile Activity -->
     <string name="lblProfileName">Travis El Ave Migratoria</string>
+    <string name="lblProfileGuideName">Taylor El Ave Guía</string>
     <string name="lblProfileNationality">Nacionalidad</string>
+    <string name="lblAge">Edad</string>
+    <string name="lblGender">Género</string>
+    <string name="lblLanguage">Idioma</string>
+    <string name="lblPhone">Teléfono</string>
+    <string name="lblDescription">Descripción</string>
 
     <!-- More Fragment -->
     <string name="lblGreetings1">Hola! \n\n Gracias por compartir tus planes conmigo y mis amigos. Buscamos recurrentemente nuevas maneras para mejorar tu experiencia. Así que por favor siéntete libre de echar un vistazo a esta Guía

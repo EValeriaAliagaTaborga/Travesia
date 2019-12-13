@@ -16,7 +16,7 @@
         android:layout_marginTop="200dp"
         android:layout_marginLeft="5dp"
         android:textSize="30sp"
-        android:text="@string/lblProfileName" />
+        android:text="@string/lblProfileGuideName" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,6 +31,7 @@
         android:id="@+id/myRectangleView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:backgroundTint="@android:color/holo_purple"
         android:background="@drawable/rectangle"/>
 
     <com.mikhaellopez.circularimageview.CircularImageView
@@ -39,7 +40,7 @@
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/travis_profile"
+        android:src="@drawable/guide"
 
         android:layout_gravity="center"
         app:civ_border_color="#FF000000"
@@ -51,7 +52,7 @@
         android:layout_marginTop="245dp"
         android:layout_marginLeft="115dp"
 
-        android:src="@drawable/bolivia" />
+        android:src="@drawable/korea_south" />
 
     <View
         android:layout_width="385dp"

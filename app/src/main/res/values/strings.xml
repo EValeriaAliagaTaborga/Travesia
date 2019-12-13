@@ -11,7 +11,16 @@
 
     <!-- Profile Activity -->
     <string name="lblProfileName">Travis The Migratory Bird</string>
+    <string name="lblProfileGuideName">Taylor The Guide Bird</string>
     <string name="lblProfileNationality">Nationality</string>
+    <string name="lblAge">Age</string>
+    <string name="lblGender">Gender</string>
+    <string name="lblLanguage">Language</string>
+
+    <string name="lblPhone">Phone</string>
+    <string name="lblDescription">Description</string>
+
+
 
     <!-- More Fragment -->
 
