@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(i);
                 }
                 else{
-                    Toast.makeText(LoginActivity.this,"Please Login",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this,"Please login",Toast.LENGTH_SHORT).show();
                 }
             }
         };
@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                 String email = emailId.getText().toString();
                 String pwd = password.getText().toString();
                 if(email.isEmpty()){
-                    emailId.setError("Please enter email id");
+                    emailId.setError("Please enter your email");
                     emailId.requestFocus();
                 }
                 else  if(pwd.isEmpty()){
@@ -70,14 +70,14 @@ public class LoginActivity extends AppCompatActivity {
                     password.requestFocus();
                 }
                 else  if(email.isEmpty() && pwd.isEmpty()){
-                    Toast.makeText(LoginActivity.this,"Fields Are Empty!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this,"Fields are empty!",Toast.LENGTH_SHORT).show();
                 }
                 else  if(!(email.isEmpty() && pwd.isEmpty())){
                     mFirebaseAuth.signInWithEmailAndPassword(email, pwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(!task.isSuccessful()){
-                                Toast.makeText(LoginActivity.this,"Login Error, Please Login Again",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this,"Login Error, please login again",Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 Intent intToHome = new Intent(LoginActivity.this,MainActivity.class);
