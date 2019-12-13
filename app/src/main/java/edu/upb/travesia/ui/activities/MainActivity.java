@@ -5,15 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.gson.Gson;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import edu.upb.travesia.R;
+import edu.upb.travesia.models.ui.UserLogged;
 import edu.upb.travesia.ui.fragments.BookingsFragment;
 import edu.upb.travesia.ui.fragments.CountriesListFragment;
 import edu.upb.travesia.ui.fragments.ExploreFragment;
@@ -25,6 +29,8 @@ import edu.upb.travesia.utils.Constants;
 public class MainActivity extends AppCompatActivity {
 
 
+    private UserLogged userLogged;
+
 
     private BottomNavigationView navigationView;
     private Map<String, Fragment> mapFragments = new HashMap<>();
@@ -34,16 +40,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initUI();
+        getUserInfo();
 
         configureNavigationEvents();
         initFragments();
         loadFragment(Constants.KEY_FRAGMENT_PROFILE);
+
+        Intent intent = getIntent();
+        if (intent.hasExtra("message")) {
+            String message = intent.getStringExtra("message");
+            Toast.makeText(this, // Context, origen
+                    message, //Mensaje
+                    Toast.LENGTH_SHORT) //Duración
+                    .show();
+        }
+
     }
 
    private void initUI() {
         navigationView = findViewById(R.id.bottomNavigation);
     }
 
+    private void getUserInfo() {
+        Intent intent = getIntent();
+        if (intent.hasExtra(Constants.INTENT_KEY_USER_LOGGED)) {
+            String json = intent.getStringExtra(Constants.INTENT_KEY_USER_LOGGED);
+            try {
+                userLogged = new Gson().fromJson(json, UserLogged.class);
+            } catch (Exception ex) {
+
+            }
+        }
+    }
 
 
     private void configureNavigationEvents() {
@@ -79,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initFragments() {
-        mapFragments.put(Constants.KEY_FRAGMENT_PROFILE, new ProfileFragment());
+        mapFragments.put(Constants.KEY_FRAGMENT_PROFILE, new ProfileFragment(userLogged));
         mapFragments.put(Constants.KEY_FRAGMENT_BOOKINGS, new BookingsFragment());
         //mapFragments.put(Constants.KEY_FRAGMENT_EXPLORE, new ExploreFragment());
         mapFragments.put(Constants.KEY_FRAGMENT_ONTOUR, new OnTourFragment());

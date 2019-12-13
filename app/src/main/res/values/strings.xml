@@ -8,6 +8,11 @@
     <string name="btnSignUp">Sign Up</string>
     <string name="txtEmail">E-mail</string>
     <string name="txtPassword">Password</string>
+    <string name="error_empty">Please enter all mandatory fields.</string>
+    <string name="welcome">Welcome: %s</string>
+    <string name="error_invalid_email">Enter a valid email</string>
+    <string name="error_login_failed">Authentication failed.</string>
+
 
     <!-- Profile Activity -->
     <string name="lblProfileName">Travis The Migratory Bird</string>
