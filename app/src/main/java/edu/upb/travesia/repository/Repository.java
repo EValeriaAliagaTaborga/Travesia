@@ -3,6 +3,7 @@ package edu.upb.travesia.repository;
 import androidx.lifecycle.LiveData;
 
 import edu.upb.travesia.models.repository.Base;
+import edu.upb.travesia.repository.api.ApiRespository;
 
 public class Repository implements RepositoryImpl {
     private static Repository instance;
@@ -25,8 +26,8 @@ public class Repository implements RepositoryImpl {
 
     @Override
     public LiveData<Base> getCountries() {
-        //return ApiRepository.getInstance().getRoutes();
-        return null;
+        return ApiRespository.getInstance().getCountries();
+        //return null;
     }
 
     @Override
