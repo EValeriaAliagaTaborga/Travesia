@@ -25,6 +25,7 @@
             android:textSize="35sp" />
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/top_text"
@@ -33,6 +34,7 @@
             android:padding="15dp"/>
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bottom_text"

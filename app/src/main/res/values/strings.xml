@@ -42,7 +42,7 @@
     <string name="lblLoginTitle">LOGIN</string>
     <string name="lblEmail">Email</string>
     <string name="lblPassword">Password</string>
-    <string name="lblForget">Forget your password?</string>
+    <string name="lblForget">Forgot your password?</string>
     <string name="buttonLogin">LOG IN</string>
 
     <string name="lblOr">OR</string>

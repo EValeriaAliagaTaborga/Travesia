@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -46,5 +47,8 @@ dependencies {
     // Lifecycle components
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.1.0"
-}
 
+    //Firebase
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+}
