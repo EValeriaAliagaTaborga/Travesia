@@ -45,4 +45,12 @@
 
     <string name="buttonSignUp">SIGN UP</string>
 
+    <!-- OnTour Fragment -->
+
+    <string name="lblIntroOntour1">For your safety, please turn on the GPS function before starting your Tour and turn it off afterwards. We will store your coordenates for SOS purposes. Please take this in consideration and before pressing the Emergency button below.</string>
+    <string name="lblIntroOntour2">Emergency contact e-mail is available if you want us to get in touch with a friend or family member.</string>
+    <string name="lblEmergencyContact">Emergency Contact</string>
+    <string name="txtEmergencyContact">E-mail</string>
+    <string name="btnEmergency">Emergency</string>
+
 </resources>

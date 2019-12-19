@@ -4,15 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import edu.upb.travesia.R;
 
 public class OnTourFragment extends BaseFragment {
 
+    private Button btnEmergency;
+
     public OnTourFragment() {
         super();
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
