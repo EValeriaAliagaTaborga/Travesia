@@ -68,6 +68,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Start: " />
+                    <TextView
+                        android:id="@+id/lblDurationEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="End: " />
+                    <TextView
+                        android:id="@+id/lblDurationDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Days: " />
                 </LinearLayout>
 
                 <LinearLayout
@@ -188,6 +198,11 @@
             android:layout_height="wrap_content"
             android:text="Location" />
 
+        <ImageView
+            android:id="@+id/imgLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/default_image" />
 
         <TextView
             android:id="@+id/lblGuideTitle"
@@ -200,6 +215,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Taylor Guide" />
+
+        <Button
+            android:id="@+id/btnBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOOK" />
 
 
     </LinearLayout>

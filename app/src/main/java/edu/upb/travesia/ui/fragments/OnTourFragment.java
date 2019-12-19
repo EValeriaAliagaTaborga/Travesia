@@ -6,13 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import edu.upb.travesia.R;
+import edu.upb.travesia.models.ui.UserLogged;
 
 public class OnTourFragment extends BaseFragment {
 
-    public OnTourFragment() {
-        super();
-    }
+    private UserLogged userLogged;
 
+    public OnTourFragment(UserLogged userLogged) {
+        this.userLogged = userLogged;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
