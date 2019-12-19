@@ -58,7 +58,7 @@ public class CitiesListViewAdapter extends BaseAdapter {
         }
 
         City city = this.citiesList.get(position);
-        viewHolder.imageView.setImageResource(R.drawable.ic_person_outline_blue_30dp);
+        viewHolder.imageView.setImageResource(R.drawable.ic_place_blue_24dp);
         viewHolder.textViewName.setText(city.getName());
         return vista;
     }

@@ -8,6 +8,10 @@
     <string name="btnSignUp">Registrarse</string>
     <string name="txtEmail">E-mail</string>
     <string name="txtPassword">Contraseña</string>
+    <string name="error_empty">Por favor, llene todos los campos requeridos.</string>
+    <string name="welcome">Bienvenid@: %s</string>
+    <string name="error_invalid_email">Ingrese un email válido</string>
+    <string name="error_login_failed">Error al ingresar.</string>
 
     <!-- Profile Activity -->
     <string name="lblProfileName">Travis El Ave Migratoria</string>
