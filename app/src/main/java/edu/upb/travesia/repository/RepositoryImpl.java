@@ -17,4 +17,6 @@ public interface RepositoryImpl {
 
     LiveData<Base> getBookings(UserLogged userLogged);
 
+    Integer getRatings(String tourGuide);
+
 }

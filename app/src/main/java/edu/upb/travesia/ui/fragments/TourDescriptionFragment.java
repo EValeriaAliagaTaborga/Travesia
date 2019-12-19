@@ -8,13 +8,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
+
+import androidx.lifecycle.Observer;
 
 import com.google.gson.Gson;
 
+import java.util.HashMap;
+
 import edu.upb.travesia.R;
+import edu.upb.travesia.models.repository.Base;
 import edu.upb.travesia.models.repository.Tour;
 import edu.upb.travesia.models.ui.UserLogged;
+import edu.upb.travesia.utils.RatingUtils;
 
 public class TourDescriptionFragment extends BaseFragment{
 
@@ -33,11 +40,14 @@ public class TourDescriptionFragment extends BaseFragment{
     private TextView lblTips;
     private ImageView imgLocation;
     private TextView lblGuide;
+    private RatingBar ratingGuide;
 
     private Gson gson = new Gson();
     private Tour tour;
 
     private UserLogged userLogged;
+
+    private Integer rate;
 
     public TourDescriptionFragment(Tour tour, UserLogged userLogged) {
         this.tour = tour;
@@ -48,8 +58,8 @@ public class TourDescriptionFragment extends BaseFragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tour_description, container, false);
-        initViews(view);
 
+        initViews(view);
         fillData();
 
         btnBook.setOnClickListener(new View.OnClickListener() {
@@ -86,6 +96,14 @@ public class TourDescriptionFragment extends BaseFragment{
         lblTips.setText(tour.getTips());
         lblGuide.setText(tour.getGuide());
         imgLocation.setImageURI(Uri.parse("android.resource://edu.upb.travesia/drawable/"+tour.getLocation()));
+        rate = viewModel.getRatings(tour.getGuide());
+        if(rate == null){
+            Log.e("Rate","Nuuuuuuullllll");
+            ratingGuide.setRating(0);
+        } else {
+            ratingGuide.setRating(rate);
+        }
+
     }
 
 
@@ -105,6 +123,7 @@ public class TourDescriptionFragment extends BaseFragment{
         lblTips = view.findViewById(R.id.lblTips);
         lblGuide = view.findViewById(R.id.lblGuide);
         imgLocation = view.findViewById(R.id.imgLocation);
+        ratingGuide = view.findViewById(R.id.rating);
     }
 
 

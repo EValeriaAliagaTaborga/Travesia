@@ -36,4 +36,11 @@ public class MainViewModel extends AndroidViewModel {
     public LiveData<Base> getBookings(UserLogged userLogged){
         return repository.getBookings(userLogged);
     }
+
+    public Integer getRatings(String tourGuide){
+        Log.e("Rating","MainViewModel");
+        return repository.getRatings(tourGuide);
+    }
+
+
 }
