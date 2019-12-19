@@ -45,4 +45,19 @@
     <string name="buttonSignUp">REGISTRARSE</string>
 
 
+    <!-- Register Activity -->
+
+    <string name="lblName">Nombre</string>
+    <string name="txtName">Travis</string>
+    <string name="lblLastName">Apellido</string>
+    <string name="txtLastName">El ave Migratoria</string>
+    <string name="hintPassword">Elije una contraseña segura</string>
+    <string name="lblConfirmPassword">Confirma la contraseña</string>
+    <string name="hintConfirmPassword">Repite la misma contraseña</string>
+    <string name="lblTitleRegister">Inicia tu aventura</string>
+    <string name="btnRegister">Registrarse</string>
+    <string name="lblAge">Age</string>
+    <string name="lblGender">Gender</string>
+    <string name="lblPhone">Phone</string>
+
 </resources>
