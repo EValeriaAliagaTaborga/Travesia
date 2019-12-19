@@ -13,6 +13,7 @@ import java.util.List;
 
 import edu.upb.travesia.models.repository.Base;
 import edu.upb.travesia.models.repository.Country;
+import edu.upb.travesia.models.repository.User;
 
 public class MockRepository implements RepositoryImpl {
 
@@ -48,6 +49,16 @@ public class MockRepository implements RepositoryImpl {
 
     @Override
     public LiveData<Base> getCountryDetails(String uuid) {
+        return null;
+    }
+
+    @Override
+    public void insert(User user) {
+
+    }
+
+    @Override
+    public LiveData<List<User>> getAll() {
         return null;
     }
 }

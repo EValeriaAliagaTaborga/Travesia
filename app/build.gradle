@@ -47,6 +47,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'com.google.firebase:firebase-database:19.2.0'
 
+    //Room
+    implementation "androidx.room:room-runtime:2.1.0"
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    annotationProcessor "androidx.room:room-compiler:2.1.0"
+    androidTestImplementation "androidx.room:room-testing:2.1.0"
+
 }
 
 apply plugin: 'com.google.gms.google-services'
