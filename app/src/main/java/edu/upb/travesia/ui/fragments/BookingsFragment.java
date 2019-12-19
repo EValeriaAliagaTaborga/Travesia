@@ -9,13 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
 
 import java.util.List;
@@ -23,7 +18,7 @@ import java.util.List;
 import edu.upb.travesia.R;
 import edu.upb.travesia.models.repository.Base;
 import edu.upb.travesia.models.repository.firebase.Book;
-import edu.upb.travesia.models.repository.firebase.Bookings;
+import edu.upb.travesia.models.repository.firebase.Booking;
 import edu.upb.travesia.models.ui.UserLogged;
 
 public class BookingsFragment extends BaseFragment {
@@ -31,8 +26,7 @@ public class BookingsFragment extends BaseFragment {
     private UserLogged userLogged;
     private TextView lblTitle;
 
-    private List<Book> bookings;
-    private FirebaseDatabase db;
+    private List<Booking> bookings;
 
     public BookingsFragment(UserLogged userLogged) {
         this.userLogged = userLogged;
@@ -43,32 +37,12 @@ public class BookingsFragment extends BaseFragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bookings, container, false);
         initUI(view);
-        db = FirebaseDatabase.getInstance();
-        //Log.e("Bookings",viewModel.getBookings(userLogged).getValue().toString());
 
-        db.getReference("bookings/travis/bookings").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String values = new Gson().toJson(dataSnapshot.getValue());
-                //Log.e("Database", values);
-                bookings = (List<Book>) dataSnapshot.getValue();
-                Log.e("Database Bookings", bookings.toString());
+        //Log.e("Booking",viewModel.getBookings(userLogged).getValue().toString());
 
-                //Log.e("Database Bookings", bookings.get(0).getTourTitle());
-                lblTitle.setText(bookings.toString());
-                /*for (DataSnapshot msgSnapshot : snapshot.getChildren()) {
-                    Productos msg = msgSnapshot.getValue(Productos.class);
-                    productosAdapter.add(msg);
-                } */
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
-
-            //lblTitle.setText(bookings.get(0).getEmailUser());
+        //lblTitle.setText(bookings.get(0).getEmailUser());
         return view;
     }
 
@@ -76,6 +50,21 @@ public class BookingsFragment extends BaseFragment {
         lblTitle = view.findViewById(R.id.lblBookings);
     }
 
-
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        viewModel.getBookings(userLogged).observe(this, new Observer<Base>() {
+            @Override
+            public void onChanged(Base base) {
+                if(base.isSuccess()){
+                    //Log.e("Datos",new Gson().toJson(base.getData()));
+                    bookings = (List<Booking>) base.getData();
+                    for(int i = 0; i < bookings.size();i++){
+                        Log.e("Datos",bookings.get(i).getBookings().get(0).getTourTitle());
+                    }
+                }
+            }
+        });
+    }
 
 }

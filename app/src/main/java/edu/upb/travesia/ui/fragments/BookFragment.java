@@ -18,7 +18,7 @@ import java.util.List;
 import edu.upb.travesia.R;
 import edu.upb.travesia.models.repository.Tour;
 import edu.upb.travesia.models.repository.firebase.Book;
-import edu.upb.travesia.models.repository.firebase.Bookings;
+import edu.upb.travesia.models.repository.firebase.Booking;
 import edu.upb.travesia.models.ui.UserLogged;
 
 public class BookFragment extends BaseFragment {
@@ -81,10 +81,10 @@ public class BookFragment extends BaseFragment {
             quantity = Integer.parseInt(txtQuantity.getText().toString());
         }
 
-        books.add(new Book(confirmed, tour.getName(),tour.getPrice(),date,quantity));
-        Bookings bookings = new Bookings(userLogged.getEmail(),books);
+        books.add(new Book(confirmed, tour.getName(),tour.getPrice(),date,quantity,tour.getPicture()));
+        Booking booking = new Booking(userLogged.getEmail(),books);
         Log.e("Database", "Insert book on fragment");
-        viewModel.insertBook(bookings);
+        viewModel.insertBook(booking);
     }
 
     private void chargeProgressBarPinner() {
@@ -128,7 +128,11 @@ public class BookFragment extends BaseFragment {
     private void dismissLoading() {
         if (loadingDialog != null && loadingDialog.isShowing()) {
             loadingDialog.dismiss();
+
         }
     }
 
 }
+
+
+

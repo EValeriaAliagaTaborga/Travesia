@@ -18,10 +18,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import edu.upb.travesia.models.repository.Base;
-import edu.upb.travesia.models.repository.firebase.Book;
-import edu.upb.travesia.models.repository.firebase.Bookings;
-import edu.upb.travesia.models.repository.firebase.ObjectBasic;
+import edu.upb.travesia.models.repository.firebase.Booking;
 import edu.upb.travesia.models.ui.UserLogged;
 
 public class FirebaseRepository {
@@ -71,24 +75,25 @@ public class FirebaseRepository {
         return results;
     }
 
-    public LiveData<Base> insertBook(Bookings bookings){
+    public LiveData<Base> insertBook(Booking booking){
         final MutableLiveData<Base> result = new MutableLiveData<>();
-        String[] name = bookings.getEmailUser().split("@");
+        String[] name = booking.getEmailUser().split("@");
         Log.e("Database", "inserting book");
-        setValue("bookings/"+name[0],bookings);
-        subscribeToValues("bookings");
+        setValue("booking/"+name[0], booking);
+        subscribeToValues("booking");
         return result;
     }
 
     public LiveData<Base> getBookings(UserLogged userLogged) {
         String[] name = userLogged.getEmail().split("@");
-        return subscribeToValues("bookings/"+name[0]);
+        return subscribeToValues("booking/"+name[0]);
     }
 
     public LiveData<Base> setValue(String path, Object value) {
         final MutableLiveData<Base> result = new MutableLiveData<>();
         Log.e("Database", "Value set: "+result.toString());
-        db.getReference(path).setValue(value);
+        //db.getReference(path).setValue(value);
+        db.getReference(path).push().setValue(value);
         return result;
     }
 
@@ -97,10 +102,23 @@ public class FirebaseRepository {
         db.getReference(path).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String values = new Gson().toJson(dataSnapshot.getValue());
-                Log.e("Database", values);
+                try {
+                    Map<String, Object> mapValues = (HashMap<String, Object>) dataSnapshot.getValue();
+                    Gson gson = new Gson();
+                    List<Booking> bookingList = new ArrayList<>();
+                    Iterator hmIterator = mapValues.entrySet().iterator();
+                    while (hmIterator.hasNext()) {
+                        Map.Entry mapElement = (Map.Entry) hmIterator.next();
+                        Booking booking = gson.fromJson(gson.toJson(mapElement.getValue()), Booking.class);
+                        bookingList.add(booking);
+                    }
+                    String values = new Gson().toJson(dataSnapshot.getValue());
+                    Log.e("Database", values);
 
-                result.postValue(new Base(values));
+                    result.postValue(new Base(bookingList));
+                } catch (Exception e) {
+                    Log.e("LOG", "" + e.getMessage());
+                }
             }
 
             @Override

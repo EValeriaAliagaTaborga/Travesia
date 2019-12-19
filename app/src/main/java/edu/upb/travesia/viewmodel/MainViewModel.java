@@ -8,6 +8,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import edu.upb.travesia.models.repository.Base;
+import edu.upb.travesia.models.repository.firebase.Booking;
 import edu.upb.travesia.models.repository.firebase.Bookings;
 import edu.upb.travesia.models.ui.UserLogged;
 import edu.upb.travesia.repository.MockRepository;
@@ -28,7 +29,7 @@ public class MainViewModel extends AndroidViewModel {
         return repository.getCountries();
     }
 
-    public LiveData<Base> insertBook(Bookings bookings){
+    public LiveData<Base> insertBook(Booking bookings){
         Log.e("Database", "Insert book on view model");
         return repository.insertBook(bookings);
     }

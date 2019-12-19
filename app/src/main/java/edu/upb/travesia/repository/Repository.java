@@ -4,7 +4,11 @@ import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 
+import java.util.List;
+
 import edu.upb.travesia.models.repository.Base;
+import edu.upb.travesia.models.repository.User;
+import edu.upb.travesia.models.repository.firebase.Booking;
 import edu.upb.travesia.models.repository.firebase.Bookings;
 import edu.upb.travesia.models.ui.UserLogged;
 import edu.upb.travesia.repository.api.ApiRespository;
@@ -43,7 +47,7 @@ public class Repository implements RepositoryImpl {
 
 
     @Override
-    public LiveData<Base> insertBook(Bookings bookings) {
+    public LiveData<Base> insertBook(Booking bookings) {
         Log.e("Database", "Insert book on Repository");
         return FirebaseRepository.getInstance().insertBook(bookings);
     }
@@ -51,6 +55,16 @@ public class Repository implements RepositoryImpl {
     @Override
     public LiveData<Base> getBookings(UserLogged userLogged){
         return FirebaseRepository.getInstance().getBookings(userLogged);
+    }
+
+    @Override
+    public void insert(User user) {
+
+    }
+
+    @Override
+    public LiveData<List<User>> getAll() {
+        return null;
     }
 
     @Override

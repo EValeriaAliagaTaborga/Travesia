@@ -5,15 +5,17 @@ public class Book {
     private Boolean confirmed;
     private String tourTitle;
     private Double tourPrice;
+    private String tourImg;
     private String date;
     private int quantity;
 
-    public Book(Boolean confirmed, String tourTitle, Double tourPrice, String date, int quantity) {
+    public Book(Boolean confirmed, String tourTitle, Double tourPrice, String date, int quantity, String tourImg) {
         this.confirmed = confirmed;
         this.tourTitle = tourTitle;
         this.tourPrice = tourPrice;
         this.date = date;
         this.quantity = quantity;
+        this.tourImg = tourImg;
     }
 
     public Boolean getConfirmed() {
@@ -54,6 +56,14 @@ public class Book {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public String getTourImg() {
+        return tourImg;
+    }
+
+    public void setTourImg(String tourImg) {
+        this.tourImg = tourImg;
     }
 }
 
