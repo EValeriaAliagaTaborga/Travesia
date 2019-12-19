@@ -48,9 +48,13 @@
     <!-- OnTour Fragment -->
 
     <string name="lblIntroOntour1">Por motivos de seguridad, por favor active la función de GPS antes de empezar su Tour y apáguelo al finalizar. Sus coordenadas serán registradas por motivos de SOS. Por favor considere esto último antes de presionar el botón de Emergencia en la parte inferior.</string>
-    <string name="lblIntroOntour2">El contacto de emergencia está disponible en caso que desees que nos pongamos en contacto con un amigo o familiar.</string>
+    <string name="lblIntroOntour2">El contacto de emergencia está disponible para que nos pongamos en contacto con un amigo o familiar de confianza.</string>
     <string name="lblEmergencyContact">Contacto de Emergencia</string>
     <string name="txtEmergencyContact">Correo Electrónico</string>
     <string name="btnEmergency">Emergencia</string>
-
+    <string name="toastMessage">Contacto de emergencia y ubicación guardados. Procederemos a tomar medidas para su seguridad.  %s</string>
+    <string name="toastFalse">GPS desactivado, por favor activelo para poder acceder a su posición actual.</string>
+    <string name="toastEmailMissing">Contacto de emergencia vacio. Por favor proveea esta información de alguien en quien confie.</string>
+    <string name="swiTrue">GPS Activado</string>
+    <string name="swiFalse">GPS Desactivado</string>
 </resources>
