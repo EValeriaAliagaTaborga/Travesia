@@ -44,6 +44,29 @@
     <string name="lblOr">O</string>
     <string name="buttonSignUp">REGISTRARSE</string>
 
+    <!-- Tour Fragment -->
+    <string name="lblLanguages">Idiomas</string>
+    <string name="lblDuration">Duración</string>
+    <string name="lblStart">Inicio: </string>
+    <string name="lblEnd">Final: </string>
+    <string name="lblDays">Días: </string>
+    <string name="lblPrice">Precio</string>
+    <string name="lblCategories">Categorias</string>
+    <string name="lblCapacity">Capacidad</string>
+    <string name="lblMeeting">Punto de Encuentro</string>
+    <string name="lblDescriptionTitle">Descripción</string>
+    <string name="lblTipsTitle">Tips</string>
+    <string name="lblLocationTitle">Ubicación</string>
+    <string name="lblGuideTitle">Información del Guía</string>
+    <string name="btnBook">RESERVAR</string>
+
+
+    <!-- Book Fragment -->
+    <string name="lblBookTitle">¡Reservémoslo!</string>
+    <string name="lblDate">Fecha</string>
+    <string name="lblNumberPeople">Número de personas</string>
+    <string name="lblContactYou">Tu guía se contactará contigo para otros detalles importantes.</string>
+
 
     <!-- OnTour Fragment -->
 
