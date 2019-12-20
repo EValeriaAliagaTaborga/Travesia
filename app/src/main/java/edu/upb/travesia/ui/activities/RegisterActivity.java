@@ -1,6 +1,7 @@
 package edu.upb.travesia.ui.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +21,7 @@ import java.util.List;
 
 import edu.upb.travesia.R;
 import edu.upb.travesia.models.repository.User;
+import edu.upb.travesia.utils.Constants;
 import edu.upb.travesia.viewmodel.RegisterViewModel;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -65,6 +67,10 @@ public class RegisterActivity extends AppCompatActivity {
                 user.setNationality(spiNationality.getSelectedItem().toString());
                 user.setPassword(txtPassword.getText().toString());
                 viewModel.register(user);
+                Intent intent = new Intent(context,LoginActivity.class);
+                startActivity(intent);
+
+
             }
         });
 

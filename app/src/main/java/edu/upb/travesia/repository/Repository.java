@@ -54,4 +54,9 @@ public class Repository implements RepositoryImpl {
         return local.getAll();
     }
 
+    @Override
+    public LiveData<Base> register(String email, String password) {
+        return FirebaseRepository.getInstance().register(email,password);
+    }
+
 }

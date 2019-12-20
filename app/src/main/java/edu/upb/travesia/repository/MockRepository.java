@@ -61,4 +61,9 @@ public class MockRepository implements RepositoryImpl {
     public LiveData<List<User>> getAll() {
         return null;
     }
+
+    @Override
+    public LiveData<Base> register(String email, String password) {
+        return null;
+    }
 }

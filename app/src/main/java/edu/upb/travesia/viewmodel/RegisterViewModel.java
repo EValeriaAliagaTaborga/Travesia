@@ -25,6 +25,7 @@ public class RegisterViewModel extends AndroidViewModel {
     public LiveData<Base> register(final User user) {
         final MutableLiveData<Base> result = new MutableLiveData<>();
         repository.insert(user);
+        repository.register(user.getEmail(),user.getPassword());
         return result;
     }
 

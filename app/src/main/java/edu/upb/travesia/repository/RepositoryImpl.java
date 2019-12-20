@@ -14,10 +14,12 @@ public interface RepositoryImpl {
 
     LiveData<Base> getCountryDetails(String uuid);
 
+
     //Db
     void insert(User user);
 
     LiveData<List<User>> getAll();
 
+    LiveData<Base> register(String email, String password);
 
 }
