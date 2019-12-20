@@ -68,4 +68,18 @@ public class MockRepository implements RepositoryImpl {
         return null;
     }
 
+    @Override
+    public Integer getRatings(String tourGuide) {
+        return null;
+    }
+
+    @Override
+    public LiveData<Base> insertBook(Booking bookings) {
+        return null;
+    }
+
+    @Override
+    public LiveData<Base> getBookings(UserLogged userLogged) {
+        return null;
+    }
 }
