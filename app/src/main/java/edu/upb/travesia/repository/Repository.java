@@ -9,7 +9,6 @@ import java.util.List;
 import edu.upb.travesia.models.repository.Base;
 import edu.upb.travesia.models.repository.User;
 import edu.upb.travesia.models.repository.firebase.Booking;
-import edu.upb.travesia.models.repository.firebase.Bookings;
 import edu.upb.travesia.models.ui.UserLogged;
 import edu.upb.travesia.repository.api.ApiRespository;
 import edu.upb.travesia.repository.firebase.FirebaseRepository;

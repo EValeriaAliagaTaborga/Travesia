@@ -5,7 +5,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +19,7 @@ import com.google.gson.Gson;
 import java.util.List;
 
 import edu.upb.travesia.R;
+import edu.upb.travesia.adapters.BookingsListViewAdapter;
 import edu.upb.travesia.models.repository.Base;
 import edu.upb.travesia.models.repository.firebase.Book;
 import edu.upb.travesia.models.repository.firebase.Booking;
@@ -24,9 +28,12 @@ import edu.upb.travesia.models.ui.UserLogged;
 public class BookingsFragment extends BaseFragment {
 
     private UserLogged userLogged;
-    private TextView lblTitle;
+    //private TextView lblTitle;
 
     private List<Booking> bookings;
+
+    private ListView listview;
+
 
     public BookingsFragment(UserLogged userLogged) {
         this.userLogged = userLogged;
@@ -35,7 +42,7 @@ public class BookingsFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_bookings, container, false);
+        View view = inflater.inflate(R.layout.fragment_bookings_list, container, false);
         initUI(view);
 
         //Log.e("Booking",viewModel.getBookings(userLogged).getValue().toString());
@@ -47,7 +54,8 @@ public class BookingsFragment extends BaseFragment {
     }
 
     private void initUI(View view) {
-        lblTitle = view.findViewById(R.id.lblBookings);
+        //lblTitle = view.findViewById(R.id.lblBookings);
+        listview = view.findViewById(R.id.listViewBookings);
     }
 
     @Override
@@ -62,9 +70,30 @@ public class BookingsFragment extends BaseFragment {
                     for(int i = 0; i < bookings.size();i++){
                         Log.e("Datos",bookings.get(i).getBookings().get(0).getTourTitle());
                     }
+                    bookingsListAndAdapter();
                 }
             }
         });
     }
+
+    private void bookingsListAndAdapter() {
+
+        BookingsListViewAdapter adapter = new BookingsListViewAdapter(getActivity(), bookings);
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //List<City> cityList = countriesList.get(position).getCities();
+                //changeFragment(new CitiesListFragment(cityList,userLogged));
+                //Log.e("BookingList",bookings.get(position).getBookings().get(0).getTourTitle());
+                String message = bookings.get(position).getBookings().get(0).getTourTitle();
+                Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        listview.setAdapter(adapter);
+
+    }
+
+
 
 }
