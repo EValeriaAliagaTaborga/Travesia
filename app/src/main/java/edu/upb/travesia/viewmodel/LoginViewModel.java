@@ -13,11 +13,12 @@ import com.google.firebase.auth.FirebaseUser;
 import edu.upb.travesia.models.repository.Base;
 import edu.upb.travesia.models.ui.UserLogged;
 import edu.upb.travesia.repository.Repository;
+import edu.upb.travesia.repository.RepositoryImpl;
 import edu.upb.travesia.utils.ResponseMapper;
 
 public class LoginViewModel extends AndroidViewModel {
 
-    private Repository repository;
+    private RepositoryImpl repository;
 
     public LoginViewModel(@NonNull Application application) {
         super(application);

@@ -9,11 +9,15 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import edu.upb.travesia.models.repository.Base;
 import edu.upb.travesia.models.repository.Country;
 import edu.upb.travesia.models.repository.User;
+import edu.upb.travesia.models.repository.firebase.Booking;
+import edu.upb.travesia.models.repository.firebase.Bookings;
+import edu.upb.travesia.models.ui.UserLogged;
 
 public class MockRepository implements RepositoryImpl {
 
@@ -53,6 +57,16 @@ public class MockRepository implements RepositoryImpl {
     }
 
     @Override
+    public LiveData<Base> insertBook(Booking bookings) {
+        return null;
+    }
+
+    @Override
+    public LiveData<Base> getBookings(UserLogged userLogged) {
+        return null;
+    }
+
+    @Override
     public void insert(User user) {
 
     }
@@ -64,6 +78,11 @@ public class MockRepository implements RepositoryImpl {
 
     @Override
     public LiveData<Base> register(String email, String password) {
+        return null;
+    }
+
+    @Override
+    public Integer getRatings(String tourGuide) {
         return null;
     }
 }

@@ -44,20 +44,40 @@
     <string name="lblOr">O</string>
     <string name="buttonSignUp">REGISTRARSE</string>
 
+    <!-- Tour Fragment -->
+    <string name="lblLanguages">Idiomas</string>
+    <string name="lblDuration">Duración</string>
+    <string name="lblStart">Inicio: </string>
+    <string name="lblEnd">Final: </string>
+    <string name="lblDays">Días: </string>
+    <string name="lblPrice">Precio</string>
+    <string name="lblCategories">Categorias</string>
+    <string name="lblCapacity">Capacidad</string>
+    <string name="lblMeeting">Punto de Encuentro</string>
+    <string name="lblDescriptionTitle">Descripción</string>
+    <string name="lblTipsTitle">Tips</string>
+    <string name="lblLocationTitle">Ubicación</string>
+    <string name="lblGuideTitle">Información del Guía</string>
+    <string name="btnBook">RESERVAR</string>
 
-    <!-- Register Activity -->
 
-    <string name="lblName">Nombre</string>
-    <string name="txtName">Travis</string>
-    <string name="lblLastName">Apellido</string>
-    <string name="txtLastName">El ave Migratoria</string>
-    <string name="hintPassword">Elije una contraseña segura</string>
-    <string name="lblConfirmPassword">Confirma la contraseña</string>
-    <string name="hintConfirmPassword">Repite la misma contraseña</string>
-    <string name="lblTitleRegister">Inicia tu aventura</string>
-    <string name="btnRegister">Registrarse</string>
-    <string name="lblAge">Age</string>
-    <string name="lblGender">Gender</string>
-    <string name="lblPhone">Phone</string>
+    <!-- Book Fragment -->
+    <string name="lblBookTitle">¡Reservémoslo!</string>
+    <string name="lblDate">Fecha</string>
+    <string name="lblNumberPeople">Número de personas</string>
+    <string name="lblContactYou">Tu guía se contactará contigo para otros detalles importantes.</string>
 
+
+    <!-- OnTour Fragment -->
+
+    <string name="lblIntroOntour1">Por motivos de seguridad, por favor active la función de GPS antes de empezar su Tour y apáguelo al finalizar. Sus coordenadas serán registradas por motivos de SOS. Por favor considere esto último antes de presionar el botón de Emergencia en la parte inferior.</string>
+    <string name="lblIntroOntour2">El contacto de emergencia está disponible para que nos pongamos en contacto con un amigo o familiar de confianza.</string>
+    <string name="lblEmergencyContact">Contacto de Emergencia</string>
+    <string name="txtEmergencyContact">Correo Electrónico</string>
+    <string name="btnEmergency">Emergencia</string>
+    <string name="toastMessage">Contacto de emergencia y ubicación guardados. Procederemos a tomar medidas para su seguridad.  %s</string>
+    <string name="toastFalse">GPS desactivado, por favor activelo para poder acceder a su posición actual.</string>
+    <string name="toastEmailMissing">Contacto de emergencia vacio. Por favor proveea esta información de alguien en quien confie.</string>
+    <string name="swiTrue">GPS Activado</string>
+    <string name="swiFalse">GPS Desactivado</string>
 </resources>

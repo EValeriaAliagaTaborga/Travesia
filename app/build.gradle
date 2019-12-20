@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility = 1.8
+        sourceCompatibility = 1.8
+    }
 }
 
 dependencies {
@@ -47,11 +51,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'com.google.firebase:firebase-database:19.2.0'
 
-    //Room
-    implementation "androidx.room:room-runtime:2.1.0"
-    implementation 'com.google.android.gms:play-services-maps:17.0.0'
-    annotationProcessor "androidx.room:room-compiler:2.1.0"
-    androidTestImplementation "androidx.room:room-testing:2.1.0"
+    //Google Services
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
 
 }
 

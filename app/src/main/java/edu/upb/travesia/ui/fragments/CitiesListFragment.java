@@ -16,6 +16,7 @@ import edu.upb.travesia.R;
 import edu.upb.travesia.adapters.CitiesListViewAdapter;
 import edu.upb.travesia.models.repository.City;
 import edu.upb.travesia.models.repository.Tour;
+import edu.upb.travesia.models.ui.UserLogged;
 import edu.upb.travesia.utils.CitiesUtils;
 
 public class CitiesListFragment extends BaseFragment {
@@ -24,8 +25,11 @@ public class CitiesListFragment extends BaseFragment {
     private Gson gson = new Gson();
     private List<City> citiesList;
 
-    public CitiesListFragment(List<City> citiesList) {
+    private UserLogged userLogged;
+
+    public CitiesListFragment(List<City> citiesList, UserLogged userLogged) {
         this.citiesList = citiesList;
+        this.userLogged = userLogged;
     }
 
     @Override
@@ -44,7 +48,7 @@ public class CitiesListFragment extends BaseFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 List<Tour> toursList = citiesList.get(position).getTours();
-                changeFragment(new ToursRecyclerFragment(toursList));
+                changeFragment(new ToursRecyclerFragment(toursList,userLogged));
             }
         });
         listview.setAdapter(adapter);

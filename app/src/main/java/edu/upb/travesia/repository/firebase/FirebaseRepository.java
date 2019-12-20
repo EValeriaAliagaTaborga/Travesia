@@ -1,5 +1,7 @@
 package edu.upb.travesia.repository.firebase;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -10,12 +12,26 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import edu.upb.travesia.models.repository.Base;
+import edu.upb.travesia.models.repository.firebase.Booking;
+import edu.upb.travesia.models.ui.UserLogged;
 
 public class FirebaseRepository {
     private static FirebaseRepository instance;
     private FirebaseAuth auth;
+    private FirebaseDatabase db;
 
     public static FirebaseRepository getInstance() {
         if (instance == null) {
@@ -26,6 +42,7 @@ public class FirebaseRepository {
 
     private FirebaseRepository() {
         auth = FirebaseAuth.getInstance();
+        db = FirebaseDatabase.getInstance();
     }
 
     public LiveData<Base> login(final String email, final String password) {
@@ -57,4 +74,59 @@ public class FirebaseRepository {
         this.auth.createUserWithEmailAndPassword(email, password);
         return results;
     }
+
+    public LiveData<Base> insertBook(Booking booking){
+        final MutableLiveData<Base> result = new MutableLiveData<>();
+        String[] name = booking.getEmailUser().split("@");
+        Log.e("Database", "inserting book");
+        setValue("booking/"+name[0], booking);
+        subscribeToValues("booking");
+        return result;
+    }
+
+    public LiveData<Base> getBookings(UserLogged userLogged) {
+        String[] name = userLogged.getEmail().split("@");
+        return subscribeToValues("booking/"+name[0]);
+    }
+
+    public LiveData<Base> setValue(String path, Object value) {
+        final MutableLiveData<Base> result = new MutableLiveData<>();
+        Log.e("Database", "Value set: "+result.toString());
+        //db.getReference(path).setValue(value);
+        db.getReference(path).push().setValue(value);
+        return result;
+    }
+
+    public LiveData<Base> subscribeToValues(String path) {
+        final MutableLiveData<Base> result = new MutableLiveData<>();
+        db.getReference(path).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                try {
+                    Map<String, Object> mapValues = (HashMap<String, Object>) dataSnapshot.getValue();
+                    Gson gson = new Gson();
+                    List<Booking> bookingList = new ArrayList<>();
+                    Iterator hmIterator = mapValues.entrySet().iterator();
+                    while (hmIterator.hasNext()) {
+                        Map.Entry mapElement = (Map.Entry) hmIterator.next();
+                        Booking booking = gson.fromJson(gson.toJson(mapElement.getValue()), Booking.class);
+                        bookingList.add(booking);
+                    }
+                    String values = new Gson().toJson(dataSnapshot.getValue());
+                    Log.e("Database", values);
+
+                    result.postValue(new Base(bookingList));
+                } catch (Exception e) {
+                    Log.e("LOG", "" + e.getMessage());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        return result;
+    }
+
 }

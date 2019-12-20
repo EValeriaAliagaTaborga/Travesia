@@ -10,13 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import edu.upb.travesia.R;
+import edu.upb.travesia.models.ui.UserLogged;
 
 public class MoreFragment extends BaseFragment {
 
-    public MoreFragment() {
-        super();
-    }
+    private UserLogged userLogged;
 
+    public MoreFragment(UserLogged userLogged) {
+        this.userLogged = userLogged;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
