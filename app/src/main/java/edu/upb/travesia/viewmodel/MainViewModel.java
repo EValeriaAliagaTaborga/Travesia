@@ -21,7 +21,7 @@ public class MainViewModel extends AndroidViewModel {
 
     public MainViewModel(@NonNull Application application) {
         super(application);
-        repository = Repository.getInstance();
+        repository = Repository.getInstance(application);
         //repository = MockRepository.getInstance();
     }
 
