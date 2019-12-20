@@ -16,6 +16,7 @@ import edu.upb.travesia.R;
 import edu.upb.travesia.adapters.ToursRecyclerViewAdapter;
 import edu.upb.travesia.callback.TourCallback;
 import edu.upb.travesia.models.repository.Tour;
+import edu.upb.travesia.models.ui.UserLogged;
 import edu.upb.travesia.utils.ToursUtils;
 
 public class ToursRecyclerFragment extends BaseFragment{
@@ -25,8 +26,11 @@ public class ToursRecyclerFragment extends BaseFragment{
     private Gson gson = new Gson();
     private List<Tour> toursList;
 
-    public ToursRecyclerFragment(List<Tour> toursList) {
+    private UserLogged userLogged;
+
+    public ToursRecyclerFragment(List<Tour> toursList, UserLogged userLogged) {
         this.toursList = toursList;
+        this.userLogged = userLogged;
     }
 
     @Override
@@ -46,7 +50,7 @@ public class ToursRecyclerFragment extends BaseFragment{
                 //Intent intent = new Intent(PokemonRecyclerActivity.this, PokemonDetailsActivity.class);
                 //intent.putExtra(Constants.POKEMON_SELECTED, gson.toJson(pokemon));
                 //startActivity(intent);
-                changeFragment(new ExploreFragment());
+                changeFragment(new TourDescriptionFragment(tour,userLogged));
             }
         });
         recyclerView.setAdapter(adapter);

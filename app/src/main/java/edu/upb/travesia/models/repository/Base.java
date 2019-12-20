@@ -16,13 +16,6 @@ public class Base {
         this.data = data;
     }
 
-    public Base(String message) {
-        this.success = false;
-        this.message = message;
-        this.exception = null;
-        this.data = null;
-    }
-
     public Base(String message, Exception exception) {
         this.success = false;
         this.message = message;

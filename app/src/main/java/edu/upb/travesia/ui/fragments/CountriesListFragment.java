@@ -23,6 +23,7 @@ import edu.upb.travesia.adapters.CountriesListViewAdapter;
 import edu.upb.travesia.models.repository.Base;
 import edu.upb.travesia.models.repository.City;
 import edu.upb.travesia.models.repository.Country;
+import edu.upb.travesia.models.ui.UserLogged;
 import edu.upb.travesia.utils.Constants;
 import edu.upb.travesia.utils.CountriesUtils;
 
@@ -31,9 +32,10 @@ public class CountriesListFragment extends BaseFragment {
     private ListView listview;
     private Gson gson = new Gson();
     List<Country> countriesList;
+    private UserLogged userLogged;
 
-    public CountriesListFragment() {
-        super();
+    public CountriesListFragment(UserLogged userLogged) {
+        this.userLogged = userLogged;
     }
 
     @Override
@@ -79,7 +81,7 @@ public class CountriesListFragment extends BaseFragment {
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                             //changeFragment(new CitiesListFragment());
                             List<City> cityList = countriesList.get(position).getCities();
-                            changeFragment(new CitiesListFragment(cityList));
+                            changeFragment(new CitiesListFragment(cityList,userLogged));
                         }
                     });
                     listview.setAdapter(adapter);
