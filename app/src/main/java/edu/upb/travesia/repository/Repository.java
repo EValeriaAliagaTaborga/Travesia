@@ -1,6 +1,6 @@
 package edu.upb.travesia.repository;
 
-import android.util.Log;
+import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
@@ -12,19 +12,21 @@ import edu.upb.travesia.models.repository.firebase.Booking;
 import edu.upb.travesia.models.ui.UserLogged;
 import edu.upb.travesia.repository.api.ApiRespository;
 import edu.upb.travesia.repository.firebase.FirebaseRepository;
-import edu.upb.travesia.repository.mock.RatingMockRepository;
+import edu.upb.travesia.repository.local.LocalRepository;
 
 public class Repository implements RepositoryImpl {
     private static Repository instance;
+    private LocalRepository local;
 
-    public static Repository getInstance() {
+    public static Repository getInstance(Application application) {
         if (instance == null) {
-            instance = new Repository();
+            instance = new Repository(application);
         }
         return instance;
     }
 
-    private Repository() {
+    private Repository(Application application) {
+        local = new LocalRepository(application);
     }
 
     @Override
@@ -58,17 +60,16 @@ public class Repository implements RepositoryImpl {
 
     @Override
     public void insert(User user) {
-
+        local.insert(user);
     }
 
     @Override
     public LiveData<List<User>> getAll() {
-        return null;
+        return local.getAll();
     }
 
     @Override
-    public Integer getRatings(String tourGuide) {
-        Log.e("Rating","Repository");
-        return RatingMockRepository.getInstance().getRating(tourGuide);
+    public LiveData<Base> register(String email, String password) {
+        return FirebaseRepository.getInstance().register(email,password);
     }
 }
