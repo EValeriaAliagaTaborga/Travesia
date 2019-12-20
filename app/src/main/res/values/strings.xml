@@ -44,5 +44,25 @@
     <string name="lblOr">OR</string>
 
     <string name="buttonSignUp">SIGN UP</string>
+    <string name="lblLanguages">Languages</string>
+    <string name="lblDuration">Duration</string>
+    <string name="lblStart">Start: </string>
+    <string name="lblEnd">End: </string>
+    <string name="lblDays">Days: </string>
+    <string name="lblPrice">Price</string>
+    <string name="lblCategories">Categories</string>
+    <string name="lblCapacity">Capacity</string>
+    <string name="lblMeeting">Meeting Point</string>
+    <string name="lblDescriptionTitle">Description</string>
+    <string name="lblTipsTitle">Tips</string>
+    <string name="lblLocationTitle">Location</string>
+    <string name="lblGuideTitle">Guide Info</string>
+    <string name="btnBook">BOOK</string>
+
+
+    <string name="lblBookTitle">Let\'s book it!</string>
+    <string name="lblDate">Date</string>
+    <string name="lblNumberPeople">Number of People</string>
+    <string name="lblContactYou">Your guide will contact you for other important details.</string>
 
 </resources>

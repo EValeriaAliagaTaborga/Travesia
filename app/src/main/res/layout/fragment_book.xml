@@ -1,54 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="30dp">
 
-    <TextView
-        android:id="@+id/lblTourTitleBook"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Title" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/backborder"
+        android:padding="20dp">
 
-    <TextView
-        android:id="@+id/lblDateTitleBook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Date" />
+        <TextView
+            android:id="@+id/lblTourTitleBook"
+            style="@style/MoreFont.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/lblBookTitle" />
 
-    <EditText
-        android:id="@+id/txtDateBook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="none" />
+        <TextView
+            android:id="@+id/lblDateTitleBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblDate"
+            android:textSize="17dp" />
 
-    <!--CalendarView
-        android:id="@+id/calendarViewDateBook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" /-->
+        <EditText
+            android:id="@+id/txtDateBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="none"
+            android:hint="Ex: 25/12/2019"/>
 
-    <TextView
-        android:id="@+id/lblQuantityTitleBook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Number of People" />
+        <!--CalendarView
+            android:id="@+id/calendarViewDateBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" /-->
 
-    <EditText
-        android:id="@+id/txtQuantityBook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
+        <TextView
+            android:id="@+id/lblQuantityTitleBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblNumberPeople"
+            android:textSize="17dp" />
 
-    <Button
-        android:id="@+id/btnSendBook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SEND" />
+        <EditText
+            android:id="@+id/txtQuantityBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Ex: 5"/>
 
-    <TextView
-        android:id="@+id/lblMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="El guia se contactara con usted" />
+        <Button
+            android:id="@+id/btnSendBook"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorAccent"
+            android:text="@string/btnBook"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/lblMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lblContactYou" />
+    </LinearLayout>
+
+
 </LinearLayout>
