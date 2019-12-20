@@ -12,7 +12,7 @@ import edu.upb.travesia.models.ui.UserLogged;
 public class ProfileFragment extends BaseFragment {
 
     private TextView email;
-    private TextView type;
+    //private TextView type;
     private UserLogged userLogged;
 
     public ProfileFragment(UserLogged userLogged) {
@@ -30,9 +30,9 @@ public class ProfileFragment extends BaseFragment {
 
     private void initUI(View view) {
         email = view.findViewById(R.id.lblProfile);
-        type = view.findViewById(R.id.lblTypeProfile);
+        //type = view.findViewById(R.id.lblTypeProfile);
         email.setText(userLogged.getEmail());
-        type.setText(userLogged.getType().toString());
+        //type.setText(userLogged.getType().toString());
     }
 
 }

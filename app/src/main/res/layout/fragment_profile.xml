@@ -6,10 +6,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryLight"
-    tools:context=".ui.fragments.ProfileFragment"
-    android:padding="20pt">
+    tools:context=".ui.fragments.ExploreFragment"
+    >
 
     <TextView
+        android:id="@+id/lblProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="25sp"
+        android:text="@string/lblProfileName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:text="@string/lblProfileNationality" />
+
+
+    <View
+        android:id="@+id/myRectangleView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/rectangle"/>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/profile_image"
+        android:layout_marginTop="35dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/travis_profile"
+
+        android:layout_gravity="center"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="1dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginLeft="150dp"
+
+        android:src="@drawable/bol" />
+
+    <View
+        android:layout_width="385dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="17sp"
+        android:textColor="@android:color/background_dark"
+        android:text="@string/lblAge" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="220dp"
+        android:textSize="17sp"
+        android:textColor="@android:color/background_dark"
+        android:text="@string/lblEmail" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="355dp"
+        android:layout_marginLeft="220dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="220dp"
+        android:textSize="17sp"
+        android:textColor="@android:color/background_dark"
+        android:text="@string/lblPhone" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="425dp"
+        android:layout_marginLeft="220dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="17sp"
+        android:textColor="@android:color/background_dark"
+        android:text="@string/lblGender" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="425dp"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="440dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="17sp"
+        android:textColor="@android:color/background_dark"
+        android:text="Language" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="495dp"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/darker_gray" />
+
+
+
+</RelativeLayout>
+    <!--TextView
         android:id="@+id/lblProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,8 +160,4 @@
         android:layout_below="@+id/lblProfile"
         android:layout_marginTop="10pt"
         android:textSize="25sp"
-        android:text="@string/lblProfileTitle" />
-
-
-
-</RelativeLayout>
+        android:text="@string/lblProfileTitle" /-->
