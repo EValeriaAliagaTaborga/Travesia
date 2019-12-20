@@ -9,9 +9,7 @@ import androidx.lifecycle.LiveData;
 
 import edu.upb.travesia.models.repository.Base;
 import edu.upb.travesia.models.repository.firebase.Booking;
-import edu.upb.travesia.models.repository.firebase.Bookings;
 import edu.upb.travesia.models.ui.UserLogged;
-import edu.upb.travesia.repository.MockRepository;
 import edu.upb.travesia.repository.Repository;
 import edu.upb.travesia.repository.RepositoryImpl;
 
