@@ -44,5 +44,38 @@
     <string name="lblOr">OR</string>
 
     <string name="buttonSignUp">SIGN UP</string>
+    <string name="lblLanguages">Languages</string>
+    <string name="lblDuration">Duration</string>
+    <string name="lblStart">Start: </string>
+    <string name="lblEnd">End: </string>
+    <string name="lblDays">Days: </string>
+    <string name="lblPrice">Price</string>
+    <string name="lblCategories">Categories</string>
+    <string name="lblCapacity">Capacity</string>
+    <string name="lblMeeting">Meeting Point</string>
+    <string name="lblDescriptionTitle">Description</string>
+    <string name="lblTipsTitle">Tips</string>
+    <string name="lblLocationTitle">Location</string>
+    <string name="lblGuideTitle">Guide Info</string>
+    <string name="btnBook">BOOK</string>
+
+
+    <string name="lblBookTitle">Let\'s book it!</string>
+    <string name="lblDate">Date</string>
+    <string name="lblNumberPeople">Number of People</string>
+    <string name="lblContactYou">Your guide will contact you for other important details.</string>
+
+    <!-- OnTour Fragment -->
+
+    <string name="lblIntroOntour1">For your safety, please turn on the GPS function before starting your Tour and turn it off afterwards. We will store your coordenates for SOS purposes. Please take this in consideration and before pressing the Emergency button below.</string>
+    <string name="lblIntroOntour2">Emergency contact e-mail is available for us to get in touch with a friend or family member you trust.</string>
+    <string name="lblEmergencyContact">Emergency Contact</string>
+    <string name="txtEmergencyContact">E-mail</string>
+    <string name="btnEmergency">Emergency</string>
+    <string name="toastMessage">Emergency contact and Location have been saved. We will proceed to take action. %s</string>
+    <string name="toastFalse">GPS is not activated, please turn it on to give access at your current data.</string>
+    <string name="toastEmailMissing">Emergency contact is empty. Please provide contact information of someone you trust.</string>
+    <string name="swiTrue">GPS Activated</string>
+    <string name="swiFalse">GPS Deactivated</string>
 
 </resources>
