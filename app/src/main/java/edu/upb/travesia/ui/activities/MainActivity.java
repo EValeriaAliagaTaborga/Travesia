@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         mapFragments.put(Constants.KEY_FRAGMENT_PROFILE, new ProfileFragment(userLogged));
         mapFragments.put(Constants.KEY_FRAGMENT_BOOKINGS, new BookingsFragment(userLogged));
         //mapFragments.put(Constants.KEY_FRAGMENT_EXPLORE, new ExploreFragment(userLogged));
-        mapFragments.put(Constants.KEY_FRAGMENT_ONTOUR, new OnTourFragment(userLogged));
+        mapFragments.put(Constants.KEY_FRAGMENT_ONTOUR, new OnTourFragment());
         mapFragments.put(Constants.KEY_FRAGMENT_MORE, new MoreFragment(userLogged));
         mapFragments.put(Constants.KEY_FRAGMENT_COUNTRIES, new CountriesListFragment(userLogged));
 
